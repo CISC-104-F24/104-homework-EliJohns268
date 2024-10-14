@@ -27,10 +27,26 @@ public class playerMovement : MonoBehaviour
       bool isKeyPressedF = Input.GetKeyDown(KeyF);
         if (isKeyPressedF)
         {
-            movementDirectionW = movementDirectionW;
+            transform.position = transform.position + new Vector3(0, 0, 1);
         }
 
+        bool isKeyPressedB = Input.GetKeyDown(KeyB);
+        if (isKeyPressedB)
+        {
+            transform.position = transform.position + new Vector3(0, 0, -1);
+        }
 
-        
+        bool isKeyPressedL = Input.GetKeyDown(KeyL);
+        if (isKeyPressedL)
+        {
+            transform.position = transform.position + new Vector3(-1, 0, 0);
+        }
+
+        bool isKeyPressedR = Input.GetKeyDown(KeyR);
+        if (isKeyPressedR)
+        {
+            transform.position = transform.position + new Vector3(1, 0, 0);
+        }
+
     }
 }
