@@ -24,28 +24,28 @@ public class playerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      bool isKeyPressedF = Input.GetKeyDown(KeyF);
+      bool isKeyPressedF = Input.GetKey(KeyF);
         if (isKeyPressedF)
         {
-            transform.position = transform.position + new Vector3(0, 0, 1);
+            transform.position = transform.position + new Vector3(0, 0, 1) * Time.deltaTime * movementSpeed;
         }
 
-        bool isKeyPressedB = Input.GetKeyDown(KeyB);
+        bool isKeyPressedB = Input.GetKey(KeyB);
         if (isKeyPressedB)
         {
-            transform.position = transform.position + new Vector3(0, 0, -1);
+            transform.position = transform.position + new Vector3(0, 0, -1) * Time.deltaTime * movementSpeed;
         }
 
-        bool isKeyPressedL = Input.GetKeyDown(KeyL);
+        bool isKeyPressedL = Input.GetKey(KeyL);
         if (isKeyPressedL)
         {
-            transform.position = transform.position + new Vector3(-1, 0, 0);
+            transform.position = transform.position + new Vector3(-1, 0, 0) * Time.deltaTime * movementSpeed;
         }
 
-        bool isKeyPressedR = Input.GetKeyDown(KeyR);
+        bool isKeyPressedR = Input.GetKey(KeyR);
         if (isKeyPressedR)
         {
-            transform.position = transform.position + new Vector3(1, 0, 0);
+            transform.position = transform.position + new Vector3(1, 0, 0) * Time.deltaTime * movementSpeed;
         }
 
     }
