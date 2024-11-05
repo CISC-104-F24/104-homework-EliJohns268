@@ -18,7 +18,10 @@ public class Deathball : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        gameObject.SetActive(false);
+        if(collision.gameObject.CompareTag("Bob"))
+        {
+            Destroy(collision.gameObject);
+        }
 
     }
 }
