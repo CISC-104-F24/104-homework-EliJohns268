@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class GrowPlayer : MonoBehaviour
+public class Powerup : MonoBehaviour
 {
-    public Vector3 newScale = new Vector3(10, 10, 10);
+
+    public Color collisionColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,17 +19,16 @@ public class GrowPlayer : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider collision)
     {
-        if(other.gameObject.CompareTag("PlayerGrow"))
-        {
-            transform.localScale = newScale;
-
-        }
-
+        Debug.Log("Nooo! Ramp Man!!!");
+        
+        
+         
+        
+        
 
     }
-
 
 
 }

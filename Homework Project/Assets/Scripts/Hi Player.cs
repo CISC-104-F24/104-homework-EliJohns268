@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrowPlayer : MonoBehaviour
+public class HiPlayer : MonoBehaviour
 {
-    public Vector3 newScale = new Vector3(10, 10, 10);
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +18,7 @@ public class GrowPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("PlayerGrow"))
-        {
-            transform.localScale = newScale;
-
-        }
-
-
+        Debug.Log("hi pookie");
     }
-
-
 
 }

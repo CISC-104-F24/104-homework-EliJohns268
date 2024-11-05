@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bob
+  - Ramp Man
+  - PlayerGrow
+  - Ramp
   layers:
   - Default
   - TransparentFX

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrowPlayer : MonoBehaviour
+public class ColorTrigger : MonoBehaviour
 {
-    public Vector3 newScale = new Vector3(10, 10, 10);
+    public Color collisionColor;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,18 +16,10 @@ public class GrowPlayer : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collision collision)
     {
-        if(other.gameObject.CompareTag("PlayerGrow"))
-        {
-            transform.localScale = newScale;
-
-        }
-
-
+        GetComponent<MeshRenderer>().material.color = collisionColor;
     }
-
 
 
 }
